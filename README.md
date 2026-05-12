@@ -1,93 +1,65 @@
-# Phase 2 Code Challenge: Plantsy
+    PLANTSHOP
+A simple React application connected to a JSON backend that lets users view, add, search, and mark plants as out of stock.
 
-## Demo
+      Setup
+Clone the repo
 
-Use this gif as an example of how the app should work.
+bash
+git clone https://github.com/your-username/plantshop.git
+cd plantshop
+Install dependencies
 
-![Demo GIF](./demo.gif)
+bash
+npm install
+Run the frontend
 
-## Instructions
+bash
+npm run dev
+The app will be available at http://localhost:5173.
 
-Welcome to Plantsy! You've been tasked with building out some features for the
-admin side of a plant store. The designers have put together the components and
-CSS. Now it's up to you to bring the features to life by adding stateful logic
-as well as persisting data to the backend via our API.
+Run the backend
 
-Your job will be to make our app work according to the user stories you will
-find the [Deliverables](#Deliverables) section.
+bash
+npm run server
+JSON Server will run at http://localhost:6001/plants.
 
-## Setup
+       Features
+Fetch plants from backend and display dynamically.
 
-1. Run `npm install` in your terminal.
-2. Run `npm run server`. This will run your backend on port `6001`.
-3. In a new terminal, run `npm run dev`.
+Add new plant via form submission (POST request).
 
-Make sure to open [http://localhost:6001/plants](http://localhost:6001/plants)
-in the browser to verify that your backend is working before you proceed!
+Mark plant out of stock with a toggle button.
 
-## Endpoints
+Search plants by name using the search bar.
 
-The base URL for your backend is: `http://localhost:6001`
+  Screenshots
+Include screenshots of your app running locally:
 
-## Deliverables
+Home view with plant list
 
-As a user:
+Adding a new plant
 
-1. When the app starts, I can see all plants.
-2. I can add a new plant to the page by submitting the form.
-3. I can mark a plant as "sold out".
-4. I can search for plants by their name and see a filtered list of plants.
+Search functionality in action
 
-### Endpoints for Core Deliverables
+  Tech Stack
+React (frontend)
 
-#### GET /plants
+Vite (development server)
 
-Example Response:
+JSON Server (backend)
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Aloe",
-    "image": "./images/aloe.jpg",
-    "price": 15.99
-  },
-  {
-    "id": 2,
-    "name": "ZZ Plant",
-    "image": "./images/zz-plant.jpg",
-    "price": 25.98
-  }
-]
-```
+JavaScript (ES6+)
 
-#### POST `/plants`
+ Documentation
+Code is commented to explain logic and intent.
 
-Required Headers:
+Tests included (npm run test) to verify functionality.
 
-```js
-{
-  "Content-Type": "application/json"
-}
-```
+Followed best practices: cleaned up branches, updated .gitignore, and documented features.
 
-Request Object:
+  Future Improvements
+Persist “Out of Stock” state to backend.
 
-```json
-{
-  "name": "string",
-  "image": "string",
-  "price": number
-}
-```
+Add categories or tags for plants.
 
-Example Response:
-
-```json
-{
-  "id": 1,
-  "name": "Aloe",
-  "image": "./images/aloe.jpg",
-  "price": 15.99
-}
-```
+Improve styling and responsiveness.
